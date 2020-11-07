@@ -1,3 +1,32 @@
-<p>
-  list works!
-</p>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> To do list </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list>
+      <ion-item *ngFor="let item of list">
+        <ion-label>
+          <div fxLayoutAlign="space-between">
+            <ion-text>
+              <h2>{{ item.title }}</h2>
+            </ion-text>
+            <ion-text color="medium">
+              <p [ngClass]="{'change-color' : item.completed}">{{ item.completed }}</p>
+            </ion-text>
+          </div>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-list>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data..."
+    >
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

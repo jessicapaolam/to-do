@@ -6,7 +6,13 @@ import { AuthGuard } from './guards/auth-guard.service';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+    redirectTo: 'list',
+    pathMatch: 'full'
+  },
+  {
+    path: 'list',
+    loadChildren: () => import('./components/list/list.module').then(m => m.ListModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'login',
@@ -15,11 +21,6 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () => import('./components/register/register.module').then(m => m.RegisterModule)
-  },
-  {
-    path: 'list',
-    loadChildren: () => import('./components/list/list.module').then(m => m.ListModule),
-    canActivate: [AuthGuard]
   }
 ];
 @NgModule({

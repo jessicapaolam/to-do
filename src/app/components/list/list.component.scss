@@ -1,0 +1,15 @@
+ion-title {
+    text-align: center;
+}
+
+ion-text h2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 290px;
+}
+
+.change-color {
+    color: #3fc0fa;
+    font-weight: 800;
+}
