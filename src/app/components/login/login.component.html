@@ -1,0 +1,27 @@
+<ion-content>
+  <div fxLayout="column" fxLayoutAlign="start center" class="container">
+    <div>
+      <h1>Login</h1>
+      <img src="assets/logo-to-do.png" />
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <ion-input
+        placeholder="username"
+        type="text"
+        formControlName="username"
+      ></ion-input>
+      <ion-button expand="block" shape="round" color="secondary" type="submit" [disabled]="!loginForm.valid"
+        >Login</ion-button
+      >
+    </form>
+
+    <div
+      fxLayout="column"
+      fxLayoutAlign="start center"
+      class="sign-up"
+    >
+      <span>Don't have an account?</span>
+      <ion-button expand="block" shape="round" color="dark">Sign Up</ion-button>
+    </div>
+  </div>
+</ion-content>
