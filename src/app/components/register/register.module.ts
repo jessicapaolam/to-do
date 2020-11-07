@@ -1,12 +1,11 @@
-
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { LoginRoutingModule } from './login-routing.module';
-import { LoginComponent } from './login.component';
+import { RegisterComponent } from './register.component';
+import { RegisterRoutingModule } from './register-routing.module';
 
 @NgModule({
   imports: [
@@ -14,9 +13,9 @@ import { LoginComponent } from './login.component';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    LoginRoutingModule,
+    RegisterRoutingModule,
     FlexLayoutModule
   ],
-  declarations: [LoginComponent]
+  declarations: [RegisterComponent]
 })
-export class LoginModule {}
+export class RegisterModule {}
