@@ -9,7 +9,7 @@
     <ion-list>
       <ion-item *ngFor="let item of list">
         <ion-label>
-          <div fxLayoutAlign="space-between">
+          <div fxLayoutAlign="space-between" (click)="listDetail(item.id)">
             <ion-text>
               <h2>{{ item.title }}</h2>
             </ion-text>

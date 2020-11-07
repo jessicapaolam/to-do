@@ -37,4 +37,13 @@ export class ListService {
       catchError(this.handleError)
     )
   }
+
+  getById(id): Observable<any> {
+    return this.http
+    .get<any>(this.api + 'todos/' + id)
+    .pipe(
+      retry(2),
+      catchError(this.handleError)
+    )
+  }
 }

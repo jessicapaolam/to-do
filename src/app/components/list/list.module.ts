@@ -6,6 +6,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { ListRoutingModule } from './list-routing.module';
 import { ListComponent } from './list.component';
+import { ListDetailComponent } from './list-detail/list-detail.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { ListComponent } from './list.component';
     ListRoutingModule,
     FlexLayoutModule
   ],
-  declarations: [ListComponent]
+  declarations: [ListComponent, ListDetailComponent]
 })
 export class ListModule {}

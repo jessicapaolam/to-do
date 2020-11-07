@@ -1,7 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonInfiniteScroll } from '@ionic/angular';
+import { IonInfiniteScroll, ModalController } from '@ionic/angular';
 
 import { ListService } from './../../services/list.service';
+import { ListDetailComponent } from './list-detail/list-detail.component';
 
 @Component({
   selector: 'app-list',
@@ -13,7 +14,8 @@ export class ListComponent {
   @ViewChild(IonInfiniteScroll) infiniteScroll: IonInfiniteScroll;
 
   constructor(
-    public listService: ListService
+    private listService: ListService,
+    public modalController: ModalController
   ) {
     this.listService.getAll().subscribe(
       data => {
@@ -29,6 +31,17 @@ export class ListComponent {
         event.target.disabled = true;
       }
     }, 500);
+  }
+
+  async listDetail(id) {
+    const modal = await this.modalController.create({
+      component: ListDetailComponent,
+      componentProps: {
+        "id": id
+      }
+    });
+
+    return await modal.present();
   }
 
   toggleInfiniteScroll() {
