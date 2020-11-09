@@ -14,7 +14,7 @@
               <h2>{{ item.title }}</h2>
             </ion-text>
             <ion-text color="medium">
-              <p [ngClass]="{'change-color' : item.completed}">{{ item.completed }}</p>
+              <p class="color-status" [ngClass]="{'change-color-status' : item.completed}">{{ item.completed }}</p>
             </ion-text>
           </div>
         </ion-label>

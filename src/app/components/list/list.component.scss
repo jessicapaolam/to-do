@@ -1,15 +1,24 @@
+ion-toolbar {
+  --background: #4f5050;
+  --color: #f7f7f7;
+}
+
 ion-title {
-    text-align: center;
+  text-align: center;
 }
 
 ion-text h2 {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 290px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 290px;
 }
 
-.change-color {
-    color: #3fc0fa;
-    font-weight: 800;
+.color-status {
+    color: #866813;
+}
+
+.change-color-status {
+  color: #3fc0fa;
+  font-weight: 800;
 }
