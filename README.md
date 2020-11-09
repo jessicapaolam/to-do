@@ -7,9 +7,14 @@ Clone the project:
   git clone https://github.com/jessicapaolam/to-do
 ```
 
-Run:
+To run the project in the browser:
 
 ### `ionic serve`
 
+To run the project for android:
 
-Enjoy :stuck_out_tongue_winking_eye:	:v:
+### `npx cap copy android`
+
+To run the project for ios:
+
+### `npx cap copy ios`
